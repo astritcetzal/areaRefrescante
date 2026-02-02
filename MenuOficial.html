@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<HTML lang="es">
+<HEAD>
+  <TITLE> Area refrescante</TITLE>
+   
+<style>
+   body { 
+        font-family:'Times New Roman', Times, serif; /* Define la fuente de la letra */
+        color: white; /* Color de texto blanco para todo el cuerpo */
+        display: flex; /* Activa el modelo de caja flexible */
+        flex-direction: column; /* Alinea los elementos uno debajo de otro */
+        align-items: center; /* Centra los elementos horizontalmente */
+        background-image: linear-gradient(to left, #35dbe7, #ebff38); /* Fondo con degradado de amarillo a naranja */
+        margin: 0; /* Elimina márgenes por defecto del navegador */
+        
+     }
+
+   .titulo {
+        color: rgb(241, 51, 76); /* Color naranja fuerte para el título */
+        font-weight: 900; /* Grosor de letra máximo */
+        font-size: 4em; /* Tamaño de letra grande */
+        text-shadow:none; /*Sin sombra en el texto */
+        margin-top: 10px; /* Espacio superior */
+        
+   }
+
+   #subtitulo {
+        color: blueviolet; /* Color violeta para el subtítulo */
+        font-size: 2em; /* Tamaño de letra doble al estándar */
+   }
+
+   #cuadro {
+        color: rgb(19, 12, 8); /* Color del texto del precio */
+        font-size: 1.4em; /* Tamaño de fuente ligeramente mayor */
+        font-weight: bold; /* Texto en negrita */
+        position: relative; /* Permite posicionar elementos internos respecto a este */
+        background: #48f531; /* Fondo verde  */
+        border-radius: 40px;/* Bordes muy redondeados */
+        backdrop-filter: blur(12px); /* Efecto de desenfoque al fondo (si es transparente) */
+        padding: 25px; /* Espacio interno entre el borde y el contenido */
+        height: 400px; /* Altura fija para el cuadro */
+        display: flex; /* Activa flexbox para organizar texto e imagen */
+        flex-direction: column; /* Coloca el texto arriba y la imagen abajo */
+       justify-content:space-around ;/*space-between;*/ /* Separa el texto de la imagen al máximo */
+        border: 10px solid rgba(255, 255, 255, 0.15); /* Borde grueso semi-transparente */
+        transition: transform 0.25s ease, box-shadow 0.25s ease; /* Suaviza la animación al pasar el mouse */
+        overflow: hidden; /* Corta cualquier contenido (imagen) que se salga del borde redondeado */
+       text-align: center;
+     }
+
+   /* Estilos específicos para la imagen dentro del cuadro */
+   #cuadro img {
+        width: 100%; /* La imagen ocupa todo el ancho disponible */
+        height: 80%; /* La imagen ocupa el 70% de la altura del cuadro */
+        object-fit: cover; /* AJUSTE CLAVE: Corta y rellena sin deformar la imagen */
+        border-radius: 20px; /* Redondea las esquinas de la imagen */
+   }
+
+   .equ {
+        display: grid; /* Activa el sistema de rejilla */
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Crea columnas automáticas según el tamaño de pantalla */
+        gap: 30px; /* Espacio de separación entre cuadros */
+        width: 100%; /* Ancho total */
+        max-width: 1200px; /* No permite que la rejilla crezca más de 1200px */
+        padding: 40px 20px; /* Margen interno de la rejilla */
+   }
+
+   footer {
+    background-color: rgb(171, 253, 155); /* Color de fondo café dorado */
+    color: black; /* Color del texto */
+    padding: 20px; /* Espacio interno para que el texto no toque los bordes */
+    width: 100%; /* Obliga al footer a ocupar el 100% del ancho disponible */
+    box-sizing: border-box; /* Crucial: incluye el padding dentro del ancho total para evitar desbordamientos */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 50px; /* Espacio de separación con el contenido de arriba */
+    border-radius: 0; /* Quitamos el redondeado para que pegue perfecto con los bordes de la pantalla */
+   
+}
+#cuadro p{
+    background-color: #a8fc3a;
+    text-align: center; 
+    border:  solid rgba(201, 79, 79, 0.15);
+
+}
+a{
+     color: rgb(207, 81, 81) ;
+     font-size: 30px;
+}
+footer img {
+     width: 3%;
+     
+}
+   
+</style>
+
+</HEAD>
+<body>
+    
+<div class="titulo"> Menú</div>
+
+<div class="equ">
+     <nav id="cuadro">Azulito: <p>$50</p> <img src="imagenes\azulito.jpeg" > </nav> 
+     <nav id="cuadro"> Michelada: <p>$50</p> <img src="imagenes\miche.jpeg" > </nav> 
+     <nav id="cuadro"> Piña colada: <p>$50</p> <img src="imagenes\piña_colada.jpeg" > </nav> 
+     <nav id="cuadro"> Ice: <p>$30</p> <img src="imagenes\ice.jpeg" > </nav> 
+</div>
+
+<A href="https://maps.app.goo.gl/h4ohUypN8gp44WkFA"> <p> 📍ÁREA REFRESCANTE</p></A>
+<footer>
+     © by (❁´◡`❁) Astrit Cetzal to  <img src="imagenes\logo.jpg" >
+</footer>
+<!--que al presonar la imagen salga el precio y ubicación-->
+</body>
+</HTML>
+
