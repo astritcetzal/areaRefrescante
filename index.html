@@ -76,14 +76,14 @@
     border-radius: 0; /* Quitamos el redondeado para que pegue perfecto con los bordes de la pantalla */
    
 }
-#cuadro p{
+/*#cuadro p{
     background-color: #a8fc3a;
     text-align: center; 
     border:  solid rgba(201, 79, 79, 0.15);
 
-}
+}*/
 a{
-     color: rgb(207, 81, 81) ;
+     color: rgb(207, 81, 81);
      font-size: 30px;
 }
 footer img {
@@ -99,20 +99,28 @@ footer img {
 <div class="titulo"> Menú</div>
 
 <div class="equ">
-     <nav id="cuadro">Azulito: <p>$50</p> <img src="imagenes\azulito.jpeg" > </nav> 
-     <nav id="cuadro"> Michelada: <p>$50</p> <img src="imagenes\miche.jpeg" > </nav> 
-     <nav id="cuadro"> Piña colada: <p>$50</p> <img src="imagenes\piña_colada.jpeg" > </nav> 
-     <nav id="cuadro"> Ice: <p>$30</p> <img src="imagenes\ice.jpeg" > </nav> 
+     <nav id="cuadro">Azulito: <img src="imagenes\azulito.jpeg" data-precio="$50" onclick="mostrarPrecio(this)"> </nav> 
+     <nav id="cuadro"> Michelada <img src="imagenes\miche.jpeg"  data-precio="$50" onclick="mostrarPrecio(this)"> </nav> 
+     <nav id="cuadro"> Piña colada <img src="imagenes\piña_colada.jpeg" data-precio="$50" onclick="mostrarPrecio(this)"> </nav> 
+     <nav id="cuadro"> Ice<img src="imagenes\ice.jpeg" data-precio="$30" onclick="mostrarPrecio(this)" > </nav> 
 </div>
 
 <A href="https://maps.app.goo.gl/h4ohUypN8gp44WkFA"> <p> 📍ÁREA REFRESCANTE</p></A>
 <footer>
-     © by (❁´◡`❁) Astrit Cetzal to  <img src="imagenes\marcadeagua.png" >
+     © by (❁´◡`❁) Astrit Cetzal to  <img src="imagenes\logo.jpg" >
 </footer>
 <!--que al presonar la imagen salga el precio y ubicación-->
 </body>
+<script>
+function mostrarPrecio(elemento) {
+    // Obtenemos el precio desde el atributo data-precio
+    const precio = elemento.getAttribute('data-precio');
+    const nombre = elemento.alt;
+    
+    alert("El precio es: " + precio);
+}
+</script>
 </HTML>
-
 
 
 
